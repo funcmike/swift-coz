@@ -25,13 +25,23 @@ Blog: https://morsmachine.dk/causalprof
 - Install Coz: https://github.com/plasma-umass/coz
     - For OS X users, the easiest way is to run a docker image with linux for Swift (Intel: https://hub.docker.com/_/swift or Arm64: https://hub.docker.com/r/swiftarm/swift)
     - Install Coz: `apt update && apt install coz-profiler`
-- Add Swift Coz depedency to Your Package.swift:
+- Add Swift Coz dependency to Your *Package.swift*:
 ```
+let package = Package(
+  name: "SomePackage",
   dependencies: [
     .package(
       url: "https://github.com/funcmike/swift-coz.git", .branch("main")
     )
   ],
+  targets: [
+    .executableTarget(
+      name: "SomeTarget",
+      dependencies: [
+        .product(name: "Coz", package: "swift-coz"),
+      ]
+    ),
+  ]
 ```
 - Import Swift Coz: `import Coz`
 - Call the `Coz` wrappers in your application
