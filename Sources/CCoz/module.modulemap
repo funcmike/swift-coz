@@ -1,0 +1,4 @@
+module CCoz [system] {
+  header "shim.h"
+  export *
+}
