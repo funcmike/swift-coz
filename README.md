@@ -5,7 +5,7 @@ Coz profiler Swift wrapper/bindings.
 This is a Swift wrapper around the `Coz` profiler here: https://github.com/plasma-umass/coz inspired from https://github.com/urjitbhatia/cozgo (method names, example and this README.md)
 
 
-### Code Usage {#code-usage}
+### Code Usage
 
 | Coz Call      | Equivalent Swift Coz Call | Description |
 | ----------- | -----------   | ----------- | 
@@ -45,7 +45,7 @@ let package = Package(
 ```
 - Import Swift Coz: `import Coz`
 - Call the `Coz` wrappers in your application
-    - See the [Code Usage Section above](#code-usage)
+    - See the [Code Usage](#code-usage)
 - Build your `swift` binary with debug symbols: `swift build -c debug` and
     Check directory with binary: `swift build -c debug --show-bin-path`
 - Run your application with Coz: `coz run --- /path/to/yourSwiftBinary`
