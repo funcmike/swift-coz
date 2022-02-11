@@ -1,17 +1,17 @@
 import CCoz
 
 //Begin tells Coz-Profiler to begin a profiled transaction
-public func cozBegin(name: String) {
+public func cozBegin(_ name: String) {
     ccozBegin(name.asCString())
 }
 
 //End tells Coz-Profiler to end the profiled transaction
-public func cozEnd(name: String) {
+public func cozEnd(_ name: String) {
     ccozEnd(name.asCString())
 }
 
 //NamedProgress marks a named progress checkpoint in the span of a profiled transaction
-public func cozProgressNamed(name: String) {
+public func cozProgressNamed(_ name: String) {
     ccozProgressNamed(name.asCString())
 }
 
